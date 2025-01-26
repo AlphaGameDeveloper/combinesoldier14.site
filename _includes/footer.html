@@ -1,13 +1,5 @@
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">&copy;{{ site.time | date: '%Y' }} {{ site.name }}.</p>
-        </div>
-    </div>
-</div>
+<footer class="site-footer">
 
-{% include disqus-counts.html %}
-{% include analytics.html %}
-
-</body>
-</html>
+  <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+</footer>

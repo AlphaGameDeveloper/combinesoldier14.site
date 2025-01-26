@@ -1,74 +1,56 @@
-# Jekyll configuration
+### Site info:
+title: CombineSoldier14's Blog
+tagline: Making Steve Jobs angry sunce 20XX!
+author: CombineSoldier14
+email: combineemails14@gmail.com
+description: "" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: "programming"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+locale: en_US
 
-name: CombineSoldier14's blog
-description: Making Steve Jobs angry since 20XX!
+### Personal info and site tools info:
+github_username:  CombineSoldier14
+# favicon:     "/images/favicon.ico"
+aboutme: "" # these are shown on aboutme-sidebar.
+aboutme_photo: https://avatars.githubusercontent.com/u/101304773?v=4
+#  google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
-# url is currently only used only for the RSS feed in feed.xml
-url: https://combinesoldier14.site
+pages:
+  - title: "About"
+    url: "/about/"
+### Site setting:
+ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True
+default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
+default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr),  Russian (ru), Turkish (tr), and Indonesian (id).
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: ''
+locales:
+    en:
+      Aboutme: "About Me"
+      Archives: "Archives"
+      Blogroll: "Blogroll"
+      Categories: "Categories"
+      Copyright_Notice: "Copyright Notice"
+      Recent_Posts: "Recent Posts"
+      Tags: "Tags"
+      Previous: "Older"
+      Next: "Newer"
+      PostedInCategories: "Posted in"
+      Taggedwith: "and tagged"
+      PostDate: "on "
+      Google_search: "Site Search"
+      Home: "Home"
+      About: "About"
+      Guestbook: "Guestbook"
+      Subscribe: "Subscribe"
+    
 
-# These can be '' to hide the Github or Gitlab nav buttons
-github: 'CombineSoldier14'
-gitlab: ''
-
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: 'G-971YF3GFSX'
-
-# The 'comments' setting enables comments. You'll need to select either
-# disqus or isso below to choose a comment system. Individual posts can
-# override 'comments' to disable on a post-by-post basis.
-comments: false
-
-# Set this to your public isso URL to enable comments via isso. Set to '' to disable isso.
-isso: ''
-
-# Set this to your disqus shortname to enable comments via disqus. Set to '' to disable disqus.
-disqus: ''
-
-navbar:
-  - name: Home
-    url: /
-  - name: About
-    url: /about
-  - name: Archives
-    url: /archives
-  - name: Stats
-    url: /stats
-  - name: GitHub
-    url: https://github.com/CombineSoldier14
-  - name: CombineBot
-    url: /combinebot
-  - name: RSS Feed
-    url: /feed.xml
-
-
-links:
-  - name: YouTube
-    url: https://www.youtube.com/channel/UCoY31EmAjtj4sx5-dZG-uYQ
-  - name: Reddit
-    url: https://old.reddit.com/u/DogeDr0id709X
-  - name: Steam
-    url: https://steamcommunity.com/profiles/76561198991614173/
-  - name: Discord - @combinesoldier14
-    url: "#"
-feed:
-  path: /feed.xml
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap 
-  - jekyll-paginate
-
-permalink: /:year/:month/:title
-paginate: 3
-
-highlighter: rouge
+### Build settings
 markdown: kramdown
-gems: ['jekyll-paginate']
-
-exclude: ['README.md', 'LICENSE']
+# highlighter: pygments
+kramdown:
+        input: GFM
+        syntax_highlighter: rouge
+plugins: [jekyll-paginate]
+paginate: 5
+excerpt_separator: <!-- more -->
